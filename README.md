@@ -66,13 +66,63 @@ The general workflow was:
     -   Decision Tree Classifier
 
 ### **Confusion matrix for the logistic regression algorithm**
-![enter image description here](images/.png)
+![enter image description here](images/log_matrix.png)
 
 ### **Confusion matrix for the Random Forest algorithm**
-![enter image description here](images/.png)
+![enter image description here](images/forest_matrix.png)
 
 ### **Confusion matrix for the decision tree algorithm**
-![enter image description here](images/.png)
+![enter image description here](images/tree_matrix.png)
 
 ### **The ROC curve graph**
-![enter image description here](images/.png)
+![enter image description here](images/roc_curve.png)
+
+## Evaluation
+
+The goal of this project is to build a predictive model that can identify **SyriaTel customers** at risk of leaving (churn). Three models were tested: **Logistic Regression, Random Forest, and Decision Tree**. Performance was evaluated on accuracy, precision, recall, F1-score, and overfitting tendency.
+
+#### 1- Logistic Regression
+
+- Train Accuracy: 0.78
+- Test Accuracy: 0.75
+
+Churn class (1): Precision = 0.33, Recall = 0.69, F1 = 0.45
+
+#### **Analysis**
+
+- The model achieves good recall for churners (69%), meaning it successfully identifies most customers at risk of leaving.
+
+- However, precision is very low (33%), so many loyal customers are incorrectly flagged as churners.
+
+- Accuracy is modest, but the model does not overfit.
+
+#### 2- Random Forest
+
+- Train Accuracy: 1.00
+- Test Accuracy: 0.90
+
+Churn class (1): Precision = 0.68, Recall = 0.63, F1 = 0.66
+
+#### Analysis:
+
+- Random Forest delivers the best overall performance, with a strong balance between precision and recall.
+
+- F1-score for churners (0.66) is the highest among all models, showing a good trade-off.
+
+- The model generalizes well, though the perfect training accuracy suggests slight overfitting.
+
+#### 3- Decision Tree
+
+- Train Accuracy: 1.00
+
+- Test Accuracy: 0.88
+
+Churn class (1): Precision = 0.57, Recall = 0.72, F1 = 0.64
+
+#### Analysis:
+
+- The Decision Tree also shows strong recall (72%), slightly higher than Random Forest.
+
+- Precision (57%) is lower, leading to more false positives compared to Random Forest.
+
+- Overfitting is evident (perfect training score vs lower test score).

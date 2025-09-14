@@ -48,3 +48,31 @@ This combination of features provides valuable insights into customer behavior a
 
 ## **Modeling**
 For this project, the objective was to build a classification model to predict whether a SyriaTel customer will churn. Several machine learning algorithms were tested to identify the best-performing model.
+The general workflow was:
+
+1.  **Data Preprocessing:**
+    
+    -   Handled categorical features (_International Plan_, _Voice Mail Plan_) using OneHotEncoding.
+        
+    -   Standardized numerical features where necessary.
+        
+    -   Split the dataset into **train (70%)** and **test (30%)** sets.
+        
+2.  **Model Selection:**  
+    The following algorithms were evaluated:
+    
+    -   Logistic Regression
+    -   Random Forest        
+    -   Decision Tree Classifier
+
+### **Confusion matrix for the logistic regression algorithm**
+![enter image description here](images/.png)
+
+### **Confusion matrix for the Random Forest algorithm**
+![enter image description here](images/.png)
+
+### **Confusion matrix for the decision tree algorithm**
+![enter image description here](images/.png)
+
+### **The ROC curve graph**
+![enter image description here](images/.png)

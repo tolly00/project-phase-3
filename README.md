@@ -126,3 +126,17 @@ Churn class (1): Precision = 0.57, Recall = 0.72, F1 = 0.64
 - Precision (57%) is lower, leading to more false positives compared to Random Forest.
 
 - Overfitting is evident (perfect training score vs lower test score).
+
+
+## Conclusion
+Best Overall Model: **Random Forest**
+
+- Balanced precision and recall for churners.
+
+- Best F1-score for churn prediction.
+
+- Generalizes better than Decision Tree while outperforming Logistic Regression.
+
+**If Recall is Priority**: Decision Tree (72% recall) or Logistic Regression (69% recall) may be considered.
+
+**If Business Needs Balance**: Random Forest is recommended as the final predictive model for churn identification.
